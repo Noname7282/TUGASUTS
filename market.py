@@ -3,7 +3,7 @@ import streamlit as st
 
 model = pickle.load(open('stock_market.sav', 'rb'))
 
-st.title('Stock Price Prediction App')
+st.title('Stock Market Prediction App')
 Date = st.number_input('Input Date)')
 Open = st.number_input('Input Harga')
 High = st.number_input('Input Harga Tertinggi')
