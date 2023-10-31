@@ -73,13 +73,17 @@ deskripsi dataset
 ```bash
 df.describe()
 ```
-
-untuk  explorasi data kita bisa dilihat dari gambar dibawah ini
-``` bash
-plt.figure(figsize=(10,6))
-sns.heatmap(df.corr(), annot=True)
-```
 ![Alt text](gambar2.png)
+
+Disini kita akan membuat Heatmap korelasi dari dataframe
+``` bash
+plt.figure(figsize=(10, 6))
+heatmap = sns.heatmap(df.corr(), annot=True, cmap='coolwarm', linewidths=.5)
+plt.title('Heatmap Korelasi')
+plt.xticks(rotation=45)
+plt.show()
+```
+![Alt text](gmbr2.png)
 
 Lalu kita akan membuat bar plot yang menunjukan data dalam DF berdasarkan kolom 'Open' (misalnya, harga pembukaan) untuk setiap nilai yang unik dalam kolom tersebut
 
