@@ -81,6 +81,33 @@ sns.heatmap(df.corr(), annot=True)
 ```
 ![Alt text](gambar2.png)
 
+Disini kita akan membuat Heatmap korelasi dari dataframe
+``` bash
+plt.figure(figsize=(10, 6))
+heatmap = sns.heatmap(df.corr(), annot=True, cmap='coolwarm', linewidths=.5)
+plt.title('Heatmap Korelasi')
+plt.xticks(rotation=45)
+plt.show()
+```
+![Alt text](gmbr2.png)
+
+Lalu kita akan membuat bar plot yang menunjukan data dalam DF berdasarkan kolom 'Open' (misalnya, harga pembukaan) untuk setiap nilai yang unik dalam kolom tersebut
+
+``` bash
+brands = df['Open'].value_counts().reset_index()
+brands.columns = ['Date', 'Turnover (Lacs)']
+```
+``` bash
+plt.figure(figsize=(15, 7))
+sns.barplot(data=brands, x='Date', y='Turnover (Lacs)', color='red')
+plt.xticks(rotation=60)
+plt.xlabel('Date')
+plt.ylabel('Turnover (Lacs)')
+plt.title('Turnover by Date')
+plt.show()
+```
+![Alt text](gmbr.png)
+
   ## Modeling
   langkah ini diawali dengan seleksi fitur
 ```bash
