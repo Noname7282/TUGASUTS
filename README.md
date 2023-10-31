@@ -29,15 +29,15 @@ menghasilkan model regresi linear yang dapat memprediksi harga saham dengan ting
   https://www.kaggle.com/code/spidy20/stock-market-prediction-with-linear-regression/output
 
   ### Variabel-variabel pada Europe bike store sales adalah sebagai berikut:
-  1. Date = object 
-  2. Open = float
-  3. High = float
-  4. Low = float
-  5. Last = float
-  6. Close = float
-  7. Total = float
-  8. Trade Quantity = float
-  9. Turnover (Lacs) = float
+  1. Date(Tanggal) = object 
+  2. Open(harga pembukaan) = float
+  3. High(harga tertinggi) = float
+  4. Low(harga terendah = float
+  5. Last(harga terakhir) = float
+  6. Close(harga penutupan) = float
+  7. Total(total perdagangan) = float
+  8. Trade Quantity(jumlah perdagangan) = float
+  9. Turnover (Lacs) (omset) = float
 
 ## Data Preparation
 
