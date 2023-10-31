@@ -73,8 +73,6 @@ deskripsi dataset
 ```bash
 df.describe()
 ```
-![Alt text](gambar2.png)
-
 Disini kita akan membuat Heatmap korelasi dari dataframe
 ``` bash
 plt.figure(figsize=(10, 6))
