@@ -110,11 +110,12 @@ Akurasi Model Regresi Linier :  1.0
  "Akurasi Model Regresi Linier: 1.0" mengindikasikan bahwa model regresi linier telah memberikan hasil prediksi yang sempurna atau 100% akurat terhadap data yang digunakan untuk menguji atau melatih model. Nilai akurasi 1.0 (atau 100%) berarti bahwa model regresi linier telah mampu memprediksi setiap sampel dengan benar dan tidak melakukan kesalahan apapun dalam estimasi.
 
 ## Evaluasi
+``` bash
 #Open) = 2024, High	= 2029 , Low = 7.85 , Last	 = 2016 , Close = 2016,  Total Trade Quantity = 4.9 
 inputan = np.array([[2024, 2029, 1985, 2016, 2016, 4.9]])
 prediksi = LR.predict(inputan)
 print('Estimasi Jumlah TO dalam setiap size menu : ', prediksi)
-
+```
 
 ## Deployment
 
