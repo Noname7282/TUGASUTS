@@ -103,8 +103,8 @@ plt.show()
   ## Modeling
   langkah ini diawali dengan seleksi fitur
 ```bash
-x = df.loc[:,'High':'Turnover (Lacs)']
-y = df.loc[:,'Open']
+x = df[['Open', 'High', 'Low', 'Last', 'Close', 'Total Trade Quantity']]
+y = df['TO']
 ```
 
 langkah ini adalah tahap split data testing dan data training
