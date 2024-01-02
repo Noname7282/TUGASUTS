@@ -4,7 +4,7 @@ from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
 
 # Load the dataset
-file_path = "CC General.csv"
+file_path = "CC GENERAL.csv"
 data = pd.read_csv(file_path)
 
 # Data Cleaning
