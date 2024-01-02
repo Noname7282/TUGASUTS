@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Load the dataset
-file_path = "CC General.csv"
+file_path = "CC GENERAL.csv"
 data = pd.read_csv(file_path)
 
 # Data Cleaning
