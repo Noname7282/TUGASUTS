@@ -7,7 +7,7 @@ import seaborn as sns
 
 # Load the dataset
 file_path = "CC GENERAL.csv"
-data = pd.read_csv(file_path)
+data = pd.read_csv('CC GENERAL.csv')
 
 # Data Cleaning
 data = data.dropna()
