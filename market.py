@@ -2,8 +2,6 @@ import streamlit as st
 import pandas as pd
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
-import matplotlib.pyplot as plt
-import seaborn as sns
 
 # Load the dataset
 file_path = "CC General.csv"
@@ -20,31 +18,20 @@ X = data[selected_features]
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
-# Initial number of clusters
-num_clusters = 3
-
 # K-Means clustering
-kmeans = KMeans(n_clusters=num_clusters, random_state=42)
-data['Cluster'] = kmeans.fit_predict(X_scaled)
-
-# Streamlit App
-st.title("Credit Card Clustering App")
-
-# Sidebar
-st.sidebar.header("Settings")
 num_clusters = st.sidebar.slider("Select number of clusters", min_value=2, max_value=10, value=3)
-
-# Update clustering based on user selection
 kmeans = KMeans(n_clusters=num_clusters, random_state=42)
 data['Cluster'] = kmeans.fit_predict(X_scaled)
 
 # Display the clustered data
+st.title("Credit Card Clustering App")
 st.write("### Clustered Data")
 st.write(data)
 
 # Display a pairplot to visualize clusters
 st.write("### Pair Plot")
-sns.pairplot(data, hue='Cluster')
+st.write("Note: This visualization may take some time for large datasets.")
+st.write(data[selected_features + ['Cluster']])
 st.pyplot()
 
 # Display cluster distribution
